@@ -85,7 +85,7 @@ split-task
 technical-plan
 ```
 
-- `docs-first`：文档先行的开发约定：需求开始或范围变化时先复述理解、对齐六点约定再实现，并按 `docs/design`、`docs/how-to`、`docs/governance` 三层维护文档；写法见其 `references/doc-system.md`。
+- `docs-first`：文档先行的开发约定：新项目初始化、既有项目改造、日常需求三种场景；按 `docs/design`、`docs/how-to`、`docs/governance` 维护文档，统一 C++/Python 代码规范与 commit 规范；改项目前先出方案等确认。
 - `split-task`：用于总结或恢复当前任务，维护 `current_tasks.md`，拆分可验证子任务并同步 TodoWrite。
 - `technical-plan`：用于大工程任务开工前调研现状、写技术方案文档、拆分实现/验证阶段，并等待用户确认后再实现。
 

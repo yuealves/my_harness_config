@@ -1,0 +1,14 @@
+BasedOnStyle: Google
+ColumnLimit: 100
+IndentWidth: 2
+AccessModifierOffset: -1
+PointerAlignment: Left
+DerivePointerAlignment: false
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<'
+    Priority: 3
+  - Regex: '^"<project>/'
+    Priority: 1
+  - Regex: '^"'
+    Priority: 2

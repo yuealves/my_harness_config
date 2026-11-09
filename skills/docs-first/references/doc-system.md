@@ -18,8 +18,10 @@ docs/
     changes/                需求/变更记录（进行中和历史）
       2026-11-09-<slug>.md
     archive/                历史方案（如已完成的迁移计划）
+    note/                   可选：未定稿调研与方案过程稿
   how-to/                   怎么做：构建、运行、排查、配置
-  governance/               什么不能变，以及怎么检查
+  governance/               代码规范 / commit 规范 / 正确性不变量 / AI 守则
+  validation/               可选：验证记录（跨天、全市场、对外验收）
 ```
 
 - 按**对象**分：总览、模块、横切能力各成一篇。不按开发阶段分（“第一阶段做了什么”不是设计）。
@@ -27,6 +29,18 @@ docs/
 - `docs/README.md` 必须回答三件事：三个目录各管什么、按意图怎么找、哪些变更在进行中。
 - 目录内文档超过 7 篇时，加该目录的 `README.md`，上级索引只留一句加链接。
 - 不留孤立文档：新增文档必须在同一次修改里从父文档或索引链上。
+- 必需的是 `design`、`how-to`、`governance` 三个目录；`validation` 和 `design/note` 按需创建，不建空目录。
+- `governance/` 固定四件：`coding-standards.md`（C++ / Python）、`commit-conventions.md`、`invariants.md`、`ai-workflow.md`。
+
+## 1.1 项目入口
+
+- `AGENTS.md` 只做 AI 入口：必读顺序、项目一句话、红线、验证命令、常用路径；不复制规范正文。
+- `README.md` 给人看：一句话说明、文档链接、快速开始。
+- 两者都必须能沿链接走到 `docs/README.md`；格式见 `references/templates/project/`。
+
+## 1.2 机械检查
+
+有 pytest 的项目加 `tests/test_docs_links.py`（模板在 `references/templates/config/`）：检查死链、锚点和索引完整性。没有 pytest 时，用等价脚本或在每次交付前手工跑一遍链接检查。
 
 `docs/README.md` 骨架（栏目可增减）：
 
@@ -165,6 +179,7 @@ docs/
 - 能被机械检查的落到测试或 CI；不能的标“人工审查”。
 - 规则给稳定位置（文件 + 小节号），其他文档引用而不复制。
 - Governance 只放长期约束，不放一次性的实现细节。
+- 四个文件各管一件事：`coding-standards` 代码风格与硬规则；`commit-conventions` 提交格式；`invariants` 正确性地基；`ai-workflow` agent 行为守则。
 
 ## 5. 拆分、合并、归档
 
@@ -177,6 +192,8 @@ docs/
 | 内容过时 | 替换，或标“已过时，见 X”；不留两份“当前” |
 | 阶段性计划、迁移方案 | 标“历史方案”，移入 `design/archive/`；当前设计另写 |
 | 需求完成 | 变更文档冻结标“已合并”，Design 更新当前行为 |
+| 验证记录（跨天、全市场、对外验收） | 放 `docs/validation/`，设计文档链接它，不复制结论 |
+| 未定稿调研、方案过程稿 | 放 `design/note/`，定稿后并入正式设计或删除 |
 
 ## 6. 更新时机
 
@@ -188,7 +205,7 @@ docs/
 
 ## 7. Git 边界
 
-- 纳入：design、how-to、governance、`docs/README.md`、可复现命令与结论摘要。
+- 纳入：design、how-to、governance、validation、`docs/README.md`、可复现命令与结论摘要。
 - 不纳入：原始对话导出、草稿、日志、大产物、重复总结。要保留的放 `docs/_local/` 并加进 `.gitignore`。
 - 项目另有规定时以项目为准，例如禁止提交行情、模型和实验产物。
 
