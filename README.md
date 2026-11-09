@@ -1,6 +1,6 @@
-# my_opencode_config
+# my_harness_config
 
-个人常用 OpenCode 配置仓库。
+个人常用 AI 编码工具的配置与 skills 仓库（Codex、Claude Code、DSH）。
 
 ## 安装
 
@@ -9,8 +9,8 @@
 在新机器上执行：
 
 ```bash
-git clone <this-repo-url> ~/Code/my_opencode_config
-cd ~/Code/my_opencode_config
+git clone <this-repo-url> ~/Code/my_harness_config
+cd ~/Code/my_harness_config
 chmod +x setup.sh
 ./setup.sh
 ```
