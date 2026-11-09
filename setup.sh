@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Legacy OpenCode installer. DSH is the default now; use install-to-dsh.sh.
 set -euo pipefail
 
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
