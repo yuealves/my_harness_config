@@ -27,6 +27,7 @@ description: 文档先行：初始化新项目、改造既有项目，以及日�
 - 必需：`docs/design/` 讲系统是什么、为什么；`docs/how-to/` 讲怎么做；`docs/governance/` 讲什么不能变。`docs/README.md` 是地图和阅读路径。
 - 按需：`docs/validation/` 放验证记录，`docs/design/note/` 放未定稿调研，`docs/design/changes/` 放需求文档；不建空目录。
 - governance 固定四件：`coding-standards.md`、`commit-conventions.md`、`invariants.md`、`ai-workflow.md`。
+- `ai-workflow.md` 记录交互方式、文档体系和工作方式；`AGENTS.md` 放摘要并指向它，这样新会话不加载本 skill 也能遵守。
 - 先读现有索引与命名并沿用（含编号）；没有索引就建 `docs/README.md` 和首篇。
 - 写或改文档前，必读 `references/doc-system.md`（通用契约、四类结构、拆分规则、生命周期、Git 边界）。
 - 结构由类型决定：变更/需求用固定六点；Design 问题驱动、不套模板；How-to 固定步骤；Governance 每条规则写规则/为什么/检查。

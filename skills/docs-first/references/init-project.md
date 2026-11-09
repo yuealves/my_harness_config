@@ -69,6 +69,8 @@ tests/test_docs_links.py   # 有 pytest 时
 
 复制后必须替换占位符，删掉不适用的段落，不留空栏目。
 
+`AGENTS.md` 的“协作约定”摘要必须保留，并指向 `docs/governance/ai-workflow.md`；不要只写“读 governance”这种泛指。
+
 ## 3. 占位符
 
 | 占位符 | 含义 | 示例 |

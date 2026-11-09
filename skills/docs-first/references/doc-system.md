@@ -37,6 +37,7 @@ docs/
 - `AGENTS.md` 只做 AI 入口：必读顺序、项目一句话、红线、验证命令、常用路径；不复制规范正文。
 - `README.md` 给人看：一句话说明、文档链接、快速开始。
 - 两者都必须能沿链接走到 `docs/README.md`；格式见 `references/templates/project/`。
+- `AGENTS.md` 必须指向 `docs/governance/ai-workflow.md`：交互方式、文档体系和工作方式写在那里，`AGENTS.md` 只放摘要；新会话不依赖外部 skill 也要能遵守。
 
 ## 1.2 机械检查
 
@@ -179,7 +180,7 @@ docs/
 - 能被机械检查的落到测试或 CI；不能的标“人工审查”。
 - 规则给稳定位置（文件 + 小节号），其他文档引用而不复制。
 - Governance 只放长期约束，不放一次性的实现细节。
-- 四个文件各管一件事：`coding-standards` 代码风格与硬规则；`commit-conventions` 提交格式；`invariants` 正确性地基；`ai-workflow` agent 行为守则。
+- 四个文件各管一件事：`coding-standards` 代码风格与硬规则；`commit-conventions` 提交格式；`invariants` 正确性地基；`ai-workflow` 交互方式与文档规约。
 
 ## 5. 拆分、合并、归档
 

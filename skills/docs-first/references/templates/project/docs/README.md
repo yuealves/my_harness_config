@@ -37,4 +37,4 @@
 - [coding-standards](governance/coding-standards.md)：C++ / Python 代码规范
 - [commit-conventions](governance/commit-conventions.md)：commit message 规范
 - [invariants](governance/invariants.md)：正确性不变量
-- [ai-workflow](governance/ai-workflow.md)：AI agent 开发守则
+- [ai-workflow](governance/ai-workflow.md)：AI 协作与文档规约（交互方式、文档体系、工作方式）
